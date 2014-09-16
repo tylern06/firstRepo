@@ -1,0 +1,34 @@
+<script>
+
+
+var answer = Math.floor(Math.random()*100);
+var guessNumb = false;
+var tries = 5;
+var count = 0;
+
+while(!guessNumb){ 
+var number = prompt("Guess the winning number between 0 and 99 and you will win $100,000.000!! You have " + tries + " tries...Goodluck!");
+tries--;
+
+if(number == answer) {
+alert("Correct! You have won $100,000,000!!! Whoo!!");
+guessNumb = true;
+break;
+}
+else if (number > answer){
+alert("Hint: answer is less");
+}
+else{
+alert("Hint: answer is higher");
+}
+
+count++;
+
+if(count == 5) {
+alert ("Sorry you have lost, the answer is " + answer + "!...GG!!");
+
+break;
+} 
+}
+
+</script>
